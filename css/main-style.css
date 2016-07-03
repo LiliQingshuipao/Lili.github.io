@@ -13,4 +13,7 @@ body,div,li,ul,p,h1,h2,h3,h4,h5,h6,table,ol
 #title
 {
 	font-family:"宋体";
+	font-weight:bold;
+	height:45px;
+	line-height:45px;
 }
