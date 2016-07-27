@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<<<<<<< HEAD
+	<link rel = "stylesheet" href = "css/main-style.css" type = "text/css"/>
+	<link rel = "stylesheet" href = "css/font-awesome.min.css" type = "text/css"/>
+	<link rel = "stylesheet" href = "css/font-awesome-ie7.min.css" type = "text/css"/>
+	<script src = "js/jquery-3.1.0.js"></script>
+	<script src = "js/myjs.js"></script>
+	<title>Li Li </title>
+</head>
+<body>
+	<header>
+		<h1>LI</h1>
+		<div class = "asideIcon"><i class="icon-reorder icon-large"></i></div>
+		<nav>
+			<li>DEMO1</li>
+			<li>DEMO2</li>
+			<li>DEMO3</li>
+			<li>DEMO4</li>
+		</nav>
+	</header>
+	<aside>
+		<div id = "userImage">
+			<img src = "images/user.png">
+		</div>
+		<div id = "userName">
+			<h3>哒哒大鱼</h3>
+		</div>
+	</aside>
+	<div class = "main">
+		<article id = "demo1">
+			<h2><a href = "#">DEMO1</a></h2>
+			<hr />
+
+		</article>
+		<article id="demo2">
+			<h2>DEMO2</h2>
+			<hr />
+		</article>
+		<article id="demo3">
+			<h2>DEMO3</h2>
+			<hr />
+		</article>
+		<article id="demo4">
+			<h2>DEMO4</h2>
+			<hr />
+		</article>
+=======
+	<title>Li Li's</title>
+	<link rel = "stylesheet" href = "css/main-style.css" type = "text/css">
+	<script type="text/javascript" src = "js/jquery-3.1.0.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			$("#logo").click(function()
+			{
+				var width = $(".side").css("width");
+				console.log(width);
+				if(width == "45px")
+				{
+					$(".side").animate({width:"150px"});
+				}
+				else
+				{
+					$(".side").animate({width:"45px"});
+				}
+			})
+		})
+	</script>
+</head>
+<body>
+	<!-- <div class="header">
+		<div class="title">一条大河一条鱼</div>
+	</div> -->
+	<div class="main">
+		<div class="side">
+			<div id="logo">LI</div>
+			<ul id = "menu">
+				<li>#</li>
+				<li>$</li>
+				<li>%</li>
+				<li>a</li>
+				<li>b</li>
+				<li>c</li>
+			</ul>
+		</div>
+>>>>>>> 475afcc2d7281066b3a10416fe39e700c14f6850
+	</div>
+</body>
+</html>
