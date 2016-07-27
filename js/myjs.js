@@ -1,10 +1,10 @@
 $(document).ready(function()
 {
-	var $height = $(window).height();
-	var sideHeight = $height -45;
-	console.log(sideHeight);
-	$("aside").css({"height": sideHeight +"px"});
-	var asidewidth = $("aside").css("width");
+	// var $height = $(window).height();
+	// var sideHeight = $height -45;
+	// console.log(sideHeight);
+	// // $("aside").css({"height": sideHeight +"px"});
+	// // var asidewidth = $("aside").css("width");
 	
 	$(".asideIcon").on("click", function()
 	{
