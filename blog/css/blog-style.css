@@ -1,0 +1,44 @@
+/*blog style css*/
+body,div,li,ul,p,h1,h2,h3,h4,h5,h6,table,ol
+{
+	margin:0px;
+	padding:0px;
+}
+html,body{
+	width:100%;
+	height:100%;
+	font-size: 16px;
+}
+#main-header{
+	background: #272822;
+	font-family: "Sans-serif";
+	color:white;
+	width: 100%;
+	padding:0 45px;
+	padding-left:5%;
+	height:45px;
+	line-height:45px;
+	position: fixed;
+	z-index: 1;
+}
+article{
+	padding-top:60px;
+	width:90%;
+	margin: 0 auto;
+}
+#article-header{
+	margin:10px 0;
+}
+#article-header hr{
+	width:50%;
+	margin:0;
+}
+#article-header h1{
+	display: inline-block;
+}
+#article-header h2{
+	display: inline-block;
+}
+.demo-images{
+
+}
