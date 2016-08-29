@@ -1,0 +1,82 @@
+/* 
+	内容：五种排序算法的实现测试页面的样式
+	作者：黎蕾
+*/
+html,body,div,ul,ol,li,p,table,h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-size: 16px;
+}
+.header{
+
+	width: 100%;
+	background: #87ceeb;
+	height: 80px;
+	line-height: 80px;
+	color: white;
+}
+.header h1{
+	font-size: 1.5rem;
+	margin-left: 20px;
+}
+.nav {
+	float: left;
+	width: 15%;	
+	box-sizing: border-box;
+	padding: 20px;
+	list-style-type: none;
+	height: 100%;
+}
+.nav li {
+	padding: 10px;
+}
+.nav a {
+	text-decoration: none;
+	color: #000;
+}
+.list.current {
+	border-right: 3px solid #87ceeb;
+}
+.main {
+	width: 75%;
+	float: right;
+	margin: 20px;
+}
+.sort {
+	display: none;
+}
+.sort.current {
+	display: block;
+}
+h2 {
+	width: 300px;
+	margin: 10px;
+}
+input {
+	height:30px;
+	line-height: 30px;
+	width: 300px;
+	display: block;
+	margin: 10px;
+
+}
+p {
+	margin: 10px;
+}
+button {
+	display: block;
+	width: 100px;
+	height: 30px;
+	margin: 10px;
+	border: none;
+	background: #87ceeb;
+	color: white;
+	font-weight: bold;
+
+}
+.output {
+	margin: 10px;
+
+}
