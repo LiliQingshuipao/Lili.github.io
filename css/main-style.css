@@ -12,15 +12,16 @@ html,body
 }
 header
 {
-	background: #272822;
+	background: #b0dfe5;
 	font-family: "Sans-serif";
 	color:white;
 	width: 100%;
 	padding:0 45px;
-	height:45px;
+	height:90px;
 	line-height:45px;
 	position: fixed;
 	z-index: 1;
+	border-bottom: 5px solid #fff;
 }
 header h1
 {
@@ -39,10 +40,21 @@ header h1
 	width:45px;
 	margin-left:45px;
 }
+.img-cloud {
+	background-image: url(../images/cloud.png);
+	width: 100px;
+	height: 100px;
+	background-size: 100px;
+	background-repeat: no-repeat;
+}
+header .img-cloud{
+	float: left;
+	background-position: center center;
+}
 nav
 {
 	list-style-type:none;
-	color:black;
+	color: #fff;
 	font-family: 'Times new Roman', 'Sans-serif'; 
 	padding:0 45px;
 	float: right;
@@ -51,16 +63,16 @@ nav li
 {
 	display: inline-block;
 	color:white;
-	padding-right:20px;
 	box-sizing:content-box;
+	margin: 10px;
+	margin-right: 20px;
 
 }
 nav li:hover
 {
-	font-size: 1.5em;
 	cursor:pointer;
 	display: inline-block;
-	transition: font-size .5s linear;
+	border-bottom: 2px solid #fff;
 }
 aside
 {
@@ -108,13 +120,6 @@ aside
 .icon-envelope {
 	color: white;
 }
-.main
-{
-
-	background: white;
-	margin:0 auto;
-	padding-top:45px;
-}
 article
 {
 	margin-left:45px;
@@ -151,7 +156,29 @@ article a
 }
 .main
 {
-	height:100%;
+	width: 100%;
+	box-sizing: border-box;
+	background-image: url(../images/main-bg.png);
+	background-size: cover;
+	padding: 100px;
+	
+}
+
+.main .img-cloud{
+	position: absolute;
+
+}
+.about{
+	height: 900px;
+	border: 1px solid #000;
+}
+.title {
+	float: right;
+	color: #fff;
+	margin: 200px;
+	font-family: 'Micrsoft YaHei';
+	font-size: 2rem;
+	font-weight: bold;
 }
 .side
 {
@@ -160,24 +187,4 @@ article a
 	background: #272822;
 	color:white;
 	float:left;
-}
-#logo
-{
-	width:20px;
-	margin:10px auto;
-}
-#logo:hover
-{
-	cursor: pointer;
-}
-#menu
-{
-	width:20px;
-	margin:10px auto;
-	text-decoration: none;
-	list-style-type: none;
-}
-#menu li
-{
-	margin:20px auto;
 }
