@@ -1,0 +1,72 @@
+<!-- 
+	内容：五种排序算法的实现测试页面
+	作者：黎蕾
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sort Example</title>
+	<link href="sort.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery.js"></script>
+	<script src="js/sort.js"></script>
+	<script src="js/example.js"></script>
+</head>
+<body>
+	<div class="header">
+		<h1>五种排序算法的实现——测试页面</h1>
+	</div>
+	<ul class="nav">
+		<li class=" list current"><a href="#bulle">冒泡排序</a></li>
+		<li class=" list"><a href="#quick">快速排序</a></li>
+		<li class=" list"><a href="#insert">插入排序</a></li>
+		<li class=" list"><a href="#marge">归并排序</a></li>
+		<li class=" list"><a href="#heap">堆排序</a></li>
+	</ul>
+	<div class="main">
+		<div class="sort current" id="bulle">
+			<h2>冒泡排序</h2>
+			<p>表单暂无输入验证 eg:5,5,2,3,4,6</p>
+			<input type="text" name="sort1">
+			<button class="bubbleSort">排序</button>
+			<div class="output">
+		</div>
+		</div>
+		<div class="sort" id="quick">
+			<h2>快速排序</h2>
+			<p>表单暂无输入验证 eg:5,5,2,3,4,6</p>
+			<input type="text" name="sort1">
+			<button class="quickSort">排序</button>
+			<div class="output">
+		</div>
+		</div>
+		<div class="sort" id="insert">
+			<h2>插入排序</h2>
+			<p>表单暂无输入验证 eg:5,5,2,3,4,6</p>
+			<input type="text" name="sort1">
+			<button class="insertSort">排序</button>
+			<div class="output">
+		</div>
+		</div>
+		<div class="sort" id="marge">
+			<h2>归并排序</h2>
+			<p>表单暂无输入验证  输入的两个数组需要有序且递增</p> 
+			<p>eg: input1:1,2,3,4 input2: 1,2,3,4</p>
+			<input type="text" name="sort1">
+			<input type="text" name="sort2">
+			<button class="mergeSort">排序</button>
+			<div class="output">
+		</div>
+		</div>
+		<div class="sort" id="heap">
+			<h2>堆排序</h2>
+			<p>表单暂无输入验证 eg:5,5,2,3,4,6</p>
+			<input type="text" name="sort1">
+			<button class="heapSort">排序</button>
+			<div class="output">
+		</div>
+		</div>
+	</div>
+</body>
+</html>
