@@ -7,7 +7,7 @@
 	<link rel = "stylesheet" href = "../css/font-awesome-ie7.min.css" type = "text/css"/>
 	<script src = "../js/jquery-3.1.0.js"></script>
 	<script src = "../js/myjs.js"></script>
-	<title>Tab选项卡</title>
+	<title>组件：Tab选项卡</title>
 </head>
 <body>
 	<header id = "main-header">
@@ -15,14 +15,14 @@
 	</header>
 	<article>
 		<header id = "article-header">
-			<h1>Tab选项卡的实现</h1>
-			<h2>采用原生的JS</h2>
+			<h1>组件：Tab选项卡</h1>
 			<hr/>
 		</header>
 		<h3>实现效果</h3>
 		<div class = "demo-images"><img src = "images/tab.png"></div>
-		<div>
-			<h3>实现过程</h3>
+		
+		<div class="article-content">
+			<h3>实现过程</h3>	
 			<p>采用原生的JS，定义一个函数Tab()，传入的参数为一个对象，该对象带入需要创建tab组件的ID,默认标签页，以及标签页切换的触发函数，以及回调函数</p>
 			<p>回调函数真是一个太神奇的东西，尽管在这个tab的例子里面使用了回调函数，但是还是很不理解回调函数的使用方式。这里给出一个简单的说法：如果一个函数a的参数是一个函数B，那么可以在A里面调用这个函数B，还可以给B传参数，那么这个B就是回调函数。大概就是如果一个参数是函数，那么这个函数就是回调函数啪啪啪</p>
 			<p>继续回到我们的Tab函数中，传入参数之后需要对参数做一个验证（划重点！刚开始我也没有验证，但是验证这一种思想还是很重要的，不管是在实现什么的情况下，拿到参数的时候要习惯性地验证一下）。验证参数无误之后再继续往下执行。这个时候如果参数不符合规则，那么就会在console控制台输出相应的错误，页面上的tab组件也不会有交互效果。</p>
@@ -30,9 +30,8 @@
 			<p>然后就是给每一个标签按钮绑定事件啦。因为tab组件比较特殊，不需要动态生成标签按钮，所以在HTML页面上直接确定好需要多少个标签卡，然后遍历一遍ul给每一个li都绑定上事件处理便可。</p>
 		</div>
 		<h3>实现代码</h3>
-		<textarea>
-			
-		</textarea>
+		<pre>
+		</pre>
 	</article>
 	<footer></footer>
 </body>

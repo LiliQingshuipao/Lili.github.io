@@ -65,7 +65,7 @@ nav li:hover
 aside
 {
 	background: #272822;
-	width:20%;
+	width:15%;
 	position:fixed;
 	right:0px;
 	display: none;
@@ -95,6 +95,18 @@ aside
 	font-family: "幼圆","YouYuan","宋体";
 	font-size: 1.5em;
 	color:white;
+
+}
+#icon-addr {
+	width:25px;
+	text-align: center;
+	margin: 20px auto;
+}
+.icon-github {
+	color: white;
+}
+.icon-envelope {
+	color: white;
 }
 .main
 {
