@@ -6,8 +6,12 @@ $(document).ready(function()
 	// // $("aside").css({"height": sideHeight +"px"});
 	// // var asidewidth = $("aside").css("width");
 	console.log($(window).height());
-	$(".main").outerHeight($(window).height());
-	$(".asideIcon").on("click", function()
+	
+	window.onresize = function(){
+		$(".main").outerHeight($(window).height());
+		console.log("x");
+	}
+/*	$(".asideIcon").on("click", function()
 	{
 		$("aside").slideToggle(1000);
 	})
@@ -31,5 +35,5 @@ $(document).ready(function()
 		}
 		cloud.css('top', y);
 		cloud.css('left', x);
-	})
+	})*/
 })
