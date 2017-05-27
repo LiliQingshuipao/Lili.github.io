@@ -1,4 +1,4 @@
-﻿/* this is the main css of my blog */
+/* this is the main css of my blog */
 body,div,li,ul,p,h1,h2,h3,h4,h5,h6,table,ol
 {
 	margin:0px;
@@ -206,4 +206,15 @@ article a
 .butt:hover {
 	cursor: pointer;
 	box-shadow: 0px 1px 3px #000;
+}
+.img{
+	width: 300px;
+	height: 300px;
+	line-height: 300px;
+	text-align: center;
+}
+.img img{
+	width: 200px;
+	height: 200px;
+	vertical-align: middle;
 }
