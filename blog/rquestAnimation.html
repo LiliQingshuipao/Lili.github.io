@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>requestAnimationFrame</title>
+	<script type="text/javascript" src= "../js/jquery-3.1.0.js"></script>
+</head>
+<body>
+	<div id="ex1" style= "width: 100%; background: #333; border-radius: 20px; height: 17px;text-align: right;line-height: 17px;">
+		<div id="test1" style = "height: 17px;width: 1px; background: #75b27c; border-radius: 20px; "></div>
+	</div>
+	<input type= "button" value= "run" id= "run">
+	<script type="text/javascript">
+		var start = null;
+		var ele = $("#test1");
+		var progress = 0;
+		var step = function(timestamp) {
+			progress +=1;
+			ele.css("width", progress+"%");
+			ele.html(progress+"%");
+			if(progress < 100){
+				requestAnimationFrame(step);
+			}
+		}
+		requestAnimationFrame(step);
+		$("#run").on("click", function(){
+			ele.css("width", progress+"%");
+			progress = 0;
+			requestAnimationFrame(step);
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		html,body {
+			min-width: 100vw;
+			min-height: 100vh;
+			margin:0;
+			padding: 0;
+			background: #f9c33d;
+		}
+		.content {
+			width: 400px;
+			height: 318px;
+			position: relative;
+			margin: auto auto;
+			vertical-align: middle;
+		}
+		.radio {
+			position: absolute;
+			margin: 0 auto;
+			left:0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+		}
+		.wheel1{
+			position: absolute;
+			top:157px;
+			left: 41px;
+			animation: wheelroll;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+		.wheel2{
+			position: absolute;
+			top: 157px;
+			left: 269px;
+			animation: wheelroll;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+		@-webkit-keyframes wheelroll {
+			from {transform:rotate(0deg)}
+			to {transform:rotate(360deg)}
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<img  class="radio" src ="./radio.png"/>
+		<img class="wheel1" src="./wheel1.png"/>
+		<img class="wheel2" src="./wheel2.png"/>
+	</div>
+</body>
+</html>
