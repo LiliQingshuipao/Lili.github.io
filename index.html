@@ -7,26 +7,158 @@
 	<link rel = "stylesheet" href = "css/font-awesome.min.css" type = "text/css"/>
 	<link rel = "stylesheet" href = "css/font-awesome-ie7.min.css" type = "text/css"/>
 	<script src = "js/jquery-3.1.0.js"></script>
-	<script src = "js/myjs.js"></script>
+	
 	<title>个人主页</title>
 </head>
 <body>
-	<header>
-		<nav>
-			<li>HOME</li>
-			<li>ABOUT</li>
-			<li>BLOG</li>
-		</nav>
-	</header>
-	<div class ="main" id ="home">
-		<!-- <div class="img-cloud" id ="cloud-fly"></div> -->
-		<div class="title">
-			<p>前方 有一千万种苦难与可能</p>
+	<div class="main">
+		<div class="nav" id="nav">
+			<ul>
+				<li data="1"class="curren">HOME</li>
+				<li data="2">SkILLS</li>
+				<li data="3">EXPERIENCE</li>
+				<li data="4">DEMOS</li>
+			</ul>
 		</div>
-		<div class="butt">ABOUT ME
+		<div class="page_box" id="pageBox">
+			<div index='1' class="page page1 curren">
+				<div class="content">
+					<svg version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%"
+ viewBox="0 0 960 560" enable-background="new 0 0 960 560" xml:space="preserve">
+
+<path fill-rule="evenodd" clip-rule="evenodd" fill="none" d="M332.65,407.98c21.496-6.47,46.176-12.834,58.317-28.241
+	c-51.866,1.717-115.606-5.675-91.641-62.13c-4.411-3.89-10.798-5.372-12.497-11.861c-2.524-9.644,6.737-18.894,10.116-24.287
+	c9.864-15.745,20.894-32.763,25.588-52.528c19.467-81.974,26.338-159.457,117.23-173.965c15.659-2.499,35.445-0.344,48.796,2.824
+	c20.436,4.85,37.635,11.89,51.772,22.593c31.843,24.109,44.93,110.504,60.698,153.631c3.337,9.128,5.531,18.059,10.711,25.417
+	c6.314,8.968,14.484,16.728,19.042,27.676c5.119,12.293,2.664,24.052-10.711,25.982c2.647,14.212,8.469,32.132,1.785,46.88
+	c-9.568,21.113-56.636,27.511-87.476,18.639c6.38,15.953,42.305,25.51,60.698,31.63"/>
+	
+</svg>
+				</div>
+				<div class="info">
+					<h1>Hi, I'm a software Engineer</h1>
+					<div>时有风雪，不阻前行。</div>
+					<br/>
+				</div>
+			</div>
+			<div index='2' class="page page2 ">
+				<div class="skills">
+					<div class="skillsDetail">
+						<div class="chartpie " id="c2">
+							<div class="chart " >
+								<li><span><a href="javascript:void(0);">HTML</a></span></li>
+								<li><span><a href="javascript:void(0);">js</a></span></li>
+								<li><span><a href="javascript:void(0);">CSS</a></span></li>
+								<li><span><a href="javascript:void(0);">jq</a></span></li>
+								<li><span><a href="javascript:void(0);">JSP</a></span></li>
+							</div>
+							<div class="button">web</div>
+						</div>
+						<div class="chartpie" id="c1">
+							<div class="chart">
+								<li><span><a href="javascript:void(0);">C++</a></span></li>
+								<li><span><a href="javascript:void(0);">Java</a></span></li>
+								<li><span><a href="javascript:void(0);">TOMCAT</a></span></li>
+								<li><span><a href="javascript:void(0);">gulp</a></span></li>
+								<li><span><a href="javascript:void(0);">SQL</a></span></li>
+								<li><span><a href="javascript:void(0);">git</a></span></li>
+								<li><span><a href="javascript:void(0);">sass</a></span></li>
+
+							</div>
+							<div class="button">other</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div index='3' class="page page3 ">
+				<div class="experience">
+					<div class="ex">
+						<div class="showDetail cur" ><span data="1">线上项目</span></div>
+						<div id="project"><span>其他项目<i class="fa icon-sort-down"></i></span></div>
+							<div class="other hide" id= "other">
+								<div class="showDetail " ><span data="2">博客网站</span></div>
+								<div class="showDetail" ><span data="3">基于gitlab的代码管理系统</span></div>
+								<div class="showDetail " ><span data="4">谣言数据库查询页面</span></div>
+							</div>
+							
+						
+					</div>
+					<div class="cont">
+						<div class="contDe ">
+							<h1>分销系统重构项目</h1>
+							<h2>2016.07-2016.10</h2>
+							<div>
+							<p><a href="http://u.yaochufa.com/ycfad2014/public/login" target="_blank">点击查看登录页</a></p>
+							<p>分销系统是公司为用户提供酒景商品购买的交易系统。</p>
+							<p>运用前端语言HTML，CSS，JavaScript，以及前端开发库jQuery进行开发，参与到项目的软件开发阶段与测试阶段。</p>
+							<p>主要负责登录页面，注册页面，平台通知页面，帮助中心页面等页面的重构。</p>
+							<p>为了提高代码的复用性以及规范页面设计以及开发，参与到相关组件的开发与设计中。如选项卡组件，幻灯片播放组件以及关键词搜索组件。</p>
+							<p>接触了前端代码构建工具gulp的使用以及代码托管工具git的使用。</p>
+							<p>接触了require.js，对模块化开发有一定的认识。</p>
+							
+							</div>
+						</div>
+						<div class="contDe hide">
+							<h1>博客网站</h1>
+							<h2>2016.01-2016.02</h2>
+							<div>
+								<p>项目是一个小型的博客类网站，支持用户发表自己的日志，删除个人日志，并且查看他人日志等操作。同时为管理员用户提供查看与删除所有用户日志的权限。</p>
+								<p>参与制定项目方案，负责项目页面设计与实现。</p>
+								<p>运用前端语言HTML，CSS，JavaScript开发。服务器使用JSP与Tomcat建立。</p>
+								<p>所有页面满足响应式开发要求。</p>
+							</div>
+						</div>
+						<div class="contDe hide" >
+							<h1>基于gitlab的代码管理系统</h1>
+							<h2>2016.03-2016.06 </h2>
+							<div>
+								<p>项目主要是为教师与学生提供简便明确的项目代码管理，支持教师用户创建课程，设置项目截止时间等操作；为学生用户提供创建分组，加入课程，加入小组，提交小组代码，以及查看他人代码等操作。</p>
+								<p>参与制定项目方案，负责项目页面设计与实现。</p>
+								<p>前端页面运用前端语言HTML，CSS，JavaScript以及库bootstrap进行开发。</p>
+								<p>所有页面满足响应式开发要求。</p>
+							</div>
+						</div>
+						<div class="contDe hide">
+							<h1>谣言数据库查询页面</h1>
+							<h2>2016.11-2016.12</h2>
+							<div>
+								<p>项目主要的目标用户群体是没有数据库操作基础的用户，为他们提供一个可视化的界面进行数据库查询。搜索设计类似于百度搜索中的高级搜索。</p>
+								<p>参与制定项目方案，负责项目页面设计与实现。</p>
+								<p>运用前端语言HTML，CSS，JavaScript以及jQuery进行开发。</p>
+								<p>JS实现一个简单的能够兼容大多数浏览器（包括旧版IE）的多行省略效果。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div index='4' class="page page4 ">
+				<div class="demos">
+					<div class="demo" id='d1'>
+						<div class="demoImg"><img src="images/image1.png"></div>
+						<div class="demoInfo"><a href='blog/canvasImage/index.html' target='_blank'>canvas粒子动画</a></div>
+					</div>
+					<div class="demo" id='d2'>
+						<div class="demoImg"><img src="images/image3.png"></div>
+						<div class="demoInfo" ><a href='blog/loading/loading.html' target='_blank'>CSS3 loading</a></div>
+					</div>
+					<div class="demo" id='d3'>
+						<div class="demoImg"><img src="images/image2.png"></div>
+						<div class="demoInfo"><a href='#' target='_blank'>音乐播放器</a></div>
+					</div>
+					<div class="demo" id='d4'>
+						<div class="demoImg"><img src="images/image5.png"></div>
+						<div class="demoInfo"><a href='#'>瀑布流</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="btn_box" id="btnBox">
+			<span index='1' class="btn btn_cur"></span>
+			<span index='2' class="btn"></span>
+			<span index='3' class="btn"></span>
+			<span index='4' class="btn"></span>
 		</div>
 	</div>
-	<!-- <div class="main" id = "about">
-	</div> -->
+	<script src = "js/myjs.js"></script>
 </body>
 </html>
