@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="font/font-awesome.min.css">
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<style type="text/css">
+		html,body {
+			background: #061f3e;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			font-size:16px;
+		}
+		.player{
+			width: 90%;
+			height: 70px;
+			margin: auto;
+			margin: auto;
+			position: relative;
+			top: 50%;
+			margin-top: -35px;
+			padding-top: 20px;
+			box-sizing: border-box;
+			box-shadow: 2px 2px 2px #222225;
+			background: #222225;
+		}
+		.player .vol{
+			width: 15%;
+			display: inline-block;
+			margin: auto;
+		}
+		.player .vol .bar .progress{
+			width: 50%;
+		}
+		.player .vol .bar .ball{
+			left: 47%;
+		}
+		.player .vol div{
+			display: inline-block;
+			box-sizing: border-box;
+			text-align: center;
+		}
+		.player .vol .volUp{
+			width: 15%;
+		}
+		.player .playProgress{
+			width: 65%;
+			margin: auto;
+			display: inline-block;
+			font-size: 1rem;
+		}
+		.cur{
+			display: inline-block;
+			width: 8%;
+			margin-right: 1%;
+		}
+		.dur {
+			width: 8%;
+			display: inline-block;
+			margin-right: 1%;
+		}
+		.player .bar{
+			width: 80%;
+			height: 0.5rem;
+			display: inline-block;
+			background: #464647;
+			border-radius: 0.7rem;
+			position: relative;
+			cursor: pointer;
+		}
+		.player .bar .progress{
+			position: absolute;
+			width: 0%;
+			height: 0.5rem;
+			border-radius:0.7rem; 
+			background: #62c6c6;
+			top:0;
+			left:0;
+		}
+		.player .bar .ball{
+			height: 1rem;
+			width: 1rem;
+			border-radius: 50%;
+			background: #fff;
+			position: absolute;
+			left:-1px;
+			top: -5px;
+		}
+
+		.player  i{
+			vertical-align: middle;
+			color:rgba(255,255,255,0.8);
+		}
+		.player .playSwitch {
+			width: 15%;
+			margin: auto; 
+			text-align: center;
+			display: inline-block;
+		}
+		.player .playSwitch div {
+			display: inline-block;
+		}
+		.player .playerStart{
+			cursor: pointer;
+		}
+		.pre{
+			width: 30%;
+		}
+		.next{
+			width: 30%;
+		}
+		.playStart{
+			width: 40%;
+		}
+		.volUp{
+			cursor: pointer;
+		}
+		@media screen and (max-width: 820px){
+			.player .bar{
+				width: 70%;
+			}
+		}
+		@media screen and (max-width: 700px){
+			.player .bar{
+				display: none;
+			}
+			.player .playSwitch{
+				width: 40%;
+			}
+			.player .playProgress{
+				width: 30%;
+			}
+			.player .playProgress .cur{
+				width: 40%;
+			}
+			.player .playProgress .dur{
+				width: 40%;
+			}
+			.cur{
+				margin-right: 1rem;
+			}
+			.cur::after{
+				content: '/';
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id="player" class="player">
+		<div class="playSwitch">
+			<div class="pre"><i class="icon-backward"></i></div>
+			<div class="playerStart" id="s"><i class="icon-play icon-2x"></i></div>
+			<div class="next"><i class="icon-forward"></i></div>
+		</div>
+		<div class="playProgress">
+			<div class="cur">00:00</div>
+			<div class="bar">
+				<div class="progress"></div>
+				<div class="ball"></div>
+			</div>
+			<div class="dur">00:00</div>
+		</div>
+		<div class="vol" id="vol">
+			<!-- <div><i class="icon-volume-off icon-2x" ></i></div> -->
+			<div class="volUp" id="volSwitch"><i class="icon-volume-up" ></i></div>
+			<div class="bar">
+				<div class="progress"></div>
+				<div class="ball"></div>
+			</div>
+		</div>
+		<audio id="a1">
+			<source src="1.mp3"></source>
+		</audio>
+	</div>
+	<script type="text/javascript">
+		var obj = {
+			curTime:0,
+			durTime: 0,
+			id: null,
+			curVol: 0.5
+		}
+		var a1 = $('#a1').get(0);
+		a1.volume = 0.5;
+		var control = $('.playProgress');
+		var bar = control.find(".bar");
+		var progress = control.find('.progress');
+		var ball = control.find('.ball');
+		var cur = $('.cur');
+		var dur = $('.dur');
+		//音量控制
+		var vol = $('#vol');
+		var volbar = vol.find('.bar');
+		var volpro = vol.find('.progress');
+		var volb = vol.find('.ball');
+		var volSwitch = $('#volSwitch');
+		var v = volSwitch.find('i');
+		volSwitch.on('click',function(){
+			if(v.hasClass('icon-volume-up')){
+				v.removeClass('icon-volume-up').addClass('icon-volume-off');
+				a1.muted = true;
+			}
+			else{
+				v.removeClass('icon-volume-off').addClass('icon-volume-up');
+				a1.muted = false;
+			}
+		})
+		//播放控制
+		var s = $('#s');
+		var t = s.find('i');
+		s.on('click', function(){	
+			if(t.hasClass('icon-play')){
+				t.removeClass('icon-play').addClass('icon-pause');
+				a1.play();
+				run();
+			}
+			else{
+				t.removeClass('icon-pause').addClass('icon-play');
+				a1.pause();
+				clearTimeout(obj.id);
+			}
+		});
+		bar.on('click',function(e){
+			var px = bar.offset().left;
+			var py = bar.offset().top;
+			var mx = e.clientX;
+			var my = e.clientY;
+			var tx = ((mx -px)/bar.width())*100;
+			/*console.log(bar.width());
+			console.log(tx);*/
+			progress.css({"width": tx+"%"});
+			ball.css({"left": tx-1+"%"});
+			a1.currentTime = obj.durTime*tx/100;
+		});
+		volbar.on('click',function(e){
+			var px =volbar.offset().left;
+			var py =volbar.offset().top;
+			var mx = e.clientX;
+			var my = e.clientY;
+			var tx = ((mx-px)/volbar.width());
+			volpro.css({'width':tx*100+'%'});
+			volb.css({'left': tx*100-3 +'%'});
+			a1.volume = tx;
+			/*console.log(tx);*/
+			if(a1.volume< 0.02){
+				a1.muted = true;
+				v.removeClass('icon-volume-up').addClass('icon-volume-off');
+			}
+			else {
+				a1.muted = false;
+				if(v.hasClass('icon-volume-off')){
+					v.removeClass('icon-volume-off').addClass('icon-volume-up');
+				}
+			}
+		})
+		function run(){
+			clearTimeout(obj.id);
+			obj.durTime = a1.duration;
+			var m = parseInt(obj.durTime/60);
+			if(m<10){
+				m = "0"+m;
+			}
+			var s = parseInt(obj.durTime%60);
+			if(s<10){
+				s = "0"+s;
+			}
+			var temp = m +":"+s;
+			dur.html(temp);
+			obj.curTime = a1.currentTime;
+			var m1 = parseInt(obj.curTime/60);
+			if(m1<10){
+				m1= "0"+m1;
+			}
+			var s1 = parseInt(obj.curTime%60);
+			if(s1 < 10){
+				s1= "0"+s1;
+			}
+			var temp1 = m1+":"+s1;
+			var w = obj.curTime/obj.durTime*100;
+			var left = w -1;
+			progress.css({"width": w+"%"});
+			ball.css({"left": left+"%"});
+			cur.html(temp1);
+			id = setTimeout(run, 1000);
+			if(a1.ended){
+				clearTimeout(obj.id);
+				t.removeClass('icon-pause').addClass('icon-play');
+			}
+		}
+	</script>
+</body>
+</html>
